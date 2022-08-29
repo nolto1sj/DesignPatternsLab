@@ -36,6 +36,19 @@ namespace DesignPatternsLab
                     Console.Write($"{color}, ");
                 }
             }
+            foreach (string color in DisplayCountry.Colors)
+            {
+                switch (color)
+                {
+                    case "green": { Console.ForegroundColor = ConsoleColor.Green; break; }
+                    case "red": { Console.ForegroundColor = ConsoleColor.Red; break; }
+                    case "yellow": {Console.ForegroundColor = ConsoleColor.Yellow; break; }
+                    case "blue": {Console.ForegroundColor = ConsoleColor.Blue; break; }
+                    case "white": {Console.ForegroundColor = ConsoleColor.White; break; }
+                    case "black": {Console.ForegroundColor = ConsoleColor.Black; break; }
+                    case "dark blue": {Console.ForegroundColor = ConsoleColor.DarkBlue; break; }
+                } //stretch goal didn't work as intended, but I thought it was fun nonetheless. 
+            }
 
         }
     }

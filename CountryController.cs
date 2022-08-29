@@ -30,6 +30,7 @@ namespace DesignPatternsLab
             {
                 int selection = int.Parse(Console.ReadLine());
                 CountryAction(CountryDb[selection - 1]);
+                var countrySelection = CountryDb[selection - 1];
                 Console.WriteLine("\nWould you like to learn about another country? (y/n)");
                 string input = Console.ReadLine().ToLower();
                 while (input != "y" && input != "n")
@@ -55,7 +56,8 @@ namespace DesignPatternsLab
             {
                 new Country("Spain", "Europe", new List<string>() {"red", "yellow"}),
                 new Country("USA", "North America", new List<string>() {"red", "white", "blue"}),
-                new Country("Japan", "Asia", new List<string>() {"red", "white", "purple", "green"}) //just tested if my CountryListView Display functioned as intented.
+                new Country("Japan", "Asia", new List<string>() {"red", "white"}),
+                new Country("Ireland", "Europe", new List<string>() {"green", "white", "orange"})
             };
         }
     }
